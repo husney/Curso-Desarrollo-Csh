@@ -32,6 +32,21 @@ namespace TryCatch
                 Console.WriteLine("Esto siempre se ejecuta");
             }
 
+            try
+            {
+                //Haga...
+            }catch(ExecutionEngineException ex)
+            {
+                //En caso de error Haga...
+            }
+            catch(EntryPointNotFoundException exPoint)
+            {
+
+            }
+            finally
+            {
+                //Siempre haga...
+            }
 
         }
 
