@@ -15,17 +15,40 @@ namespace Variables
 		public Form1()
 		{
 			InitializeComponent();
-			Console.WriteLine(fecha.ToShortDateString().ToString());
-			Console.WriteLine(fecha.Year.ToString());
-			Console.WriteLine(fecha.Month.ToString());
-			Console.WriteLine(fecha.Day.ToString());
-			Console.WriteLine(fecha.DayOfWeek.ToString());
-			Console.WriteLine(fecha.DayOfYear.ToString());
-			Console.WriteLine(fecha.Hour.ToString());
-			Console.WriteLine(fecha.Minute.ToString());
+			Console.WriteLine(fecha.ToShortDateString().ToString());//Solo la fecha
+			Console.WriteLine(fecha.Year.ToString());//Solo el año
+			Console.WriteLine(fecha.Month.ToString());//Solo el mes
+			Console.WriteLine(fecha.Day.ToString());//Solo el día
+			Console.WriteLine(fecha.DayOfWeek.ToString());//Nombre del día de la semana
+			Console.WriteLine(fecha.DayOfYear.ToString());//Numero del día en el año
+			Console.WriteLine(fecha.Hour.ToString());//Hora
+			Console.WriteLine(fecha.Minute.ToString());//Minuto
 			Console.WriteLine();
 			Console.WriteLine(fecha2.ToString());
-		}
+
+            DateTime fechaN = new DateTime(2000, 01, 01);
+
+            DateTime fechaNueva = Convert.ToDateTime(fechaN.ToString("dd/MM/yyyy"));
+
+            Console.WriteLine("-----");
+            Console.WriteLine(fechaNueva.ToShortDateString().ToString());
+
+            Console.WriteLine();
+
+            DateTime fechaZ = DateTime.Today.AddDays(-100);
+
+
+            int buscarDias = DateTime.DaysInMonth(2020, 1);
+
+            DateTime fechaPrueba = DateTime.Now;
+
+            string formato = "MMM > ddd > yyyy > HH > mm ";
+
+            Console.Write(fechaPrueba.ToString(formato));
+
+            Console.WriteLine();                        
+            
+        }
 
 		//String = objeto
 		String nombre = "Pepe";
