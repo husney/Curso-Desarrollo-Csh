@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Variables
 {
@@ -46,7 +47,15 @@ namespace Variables
 
             Console.Write(fechaPrueba.ToString(formato));
 
-            Console.WriteLine();                        
+            Console.WriteLine();
+
+            const int p = 50;
+
+            Console.WriteLine(p);
+
+
+            
+                              
             
         }
 
@@ -80,12 +89,24 @@ namespace Variables
 		DateTime fecha = DateTime.Now;
 
 		DateTime fecha2 = new DateTime(2020, 02, 10);
-		
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Ok_Click(object sender, EventArgs e)
+        {
+            this.label1.Text = "Hola Bienvenido " + this.txtMensaje.Text;
+
+            //string nombre = Microsoft.VisualBasic.Interaction.InputBox("Mensaje", "Titulo", "por defecto", 100, 0);
+            //Mensaje, titulo, valor por defecto, posición X, posición Y
+
+            //MessageBox.Show("Mensaje", "Titulo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            // ( mensaje,  titulo, botones, icono )
 
 
-
-
-
-	}
+        }
+    }
 }
 	
