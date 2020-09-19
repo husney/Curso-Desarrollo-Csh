@@ -20,7 +20,7 @@ namespace Camara
         private bool dispositivos = false;
         private FilterInfoCollection misDispositivos;
         private VideoCaptureDevice camara;
-        private string path = @"D:\C#\Camara\Camara\";
+        private string path = @"C:\";
 
         public Form1()
         {
@@ -65,26 +65,33 @@ namespace Camara
             camara.NewFrame += new NewFrameEventHandler(capturando);
             camara.Start();
             estadoBoton();
-
+            Console.WriteLine("Mostrando imagen");
+        
 
         }
 
         public void estadoBoton()
         {
-            if (camara!= null && camara.IsRunning)
+            if (camara!= null )
             {
-                this.button1.Text = "Detener";
+                //this.button1.Text = "Detener";
+                if (this.button1.Text.Equals("Iniciar"))
+                {
+                    this.button1.Text = "Detener";
+                }else if (this.button1.Text.Equals("Detener"))
+                {
+                    this.button1.Text = "Iniciar";
+                    cerrarWebCam();
+                }
             }
-            else
-            {
-                this.button1.Text = "Iniciar";
-            }
+            
         }
 
         private void capturando(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap captura = (Bitmap)eventArgs.Frame.Clone();
             this.imagen.Image = captura;
+            
         }
 
 
@@ -104,7 +111,7 @@ namespace Camara
             if (camara!= null && camara.IsRunning)
             {
                 pictureBox1.Image = imagen.Image;
-                pictureBox1.Image.Save(path + "imagen.jpg", ImageFormat.Jpeg);
+                //pictureBox1.Image.Save(path + "imagen.jpg", ImageFormat.Jpeg);
 
                 DataAccess.Conexion c = new DataAccess.Conexion();
                 c.getConexion();
@@ -124,7 +131,7 @@ namespace Camara
                 SqlCommand comando = new SqlCommand(query, c);
                 comando.Parameters.AddWithValue("@imagen", img );
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Guardado");
+                MessageBox.Show("Guardado en la DB");
             }
             catch (Exception ex)
             {
