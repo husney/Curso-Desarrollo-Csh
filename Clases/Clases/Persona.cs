@@ -31,9 +31,19 @@ namespace Clases
             Console.WriteLine(this.Nombre + " esta corriendo");
         }
 
-        public virtual void saludar()
+        public void saludar()
         {
             Console.WriteLine("Soy una PERSONA y estoy saludando (Hola)");
+        }
+
+        public override void dormir(string lugar)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void respirar()
+        {
+            throw new NotImplementedException();
         }
     }
 }

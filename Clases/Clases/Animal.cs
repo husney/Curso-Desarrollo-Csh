@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    public class Animal
+    public  class Animal
     {
-        public string Nombre { get; set; }
+        protected string nombre;
 
+        public virtual void caminar()
+        {
+            Console.WriteLine("El animal esta caminando");
+        }
     }
+
+
 }

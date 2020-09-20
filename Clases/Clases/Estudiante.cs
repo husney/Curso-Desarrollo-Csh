@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    class Estudiante : Persona
+    sealed class Estudiante : Persona
     {
         private string Curso { get; set; }
         public static int cantidadEstudiantes { get; set; }
         public Estudiante()
-        {
+        { 
             cantidadEstudiantes++;
         }
         public Estudiante(string Nombre, int Documento, string Curso) : base(Nombre, Documento)
@@ -28,9 +28,9 @@ namespace Clases
             Console.WriteLine(this.Nombre + " esta estudiando");
         }
 
-        public override void saludar()
+        public new void saludar()
         {
-            Console.WriteLine("Soy un ESTUDIANTE y voy a saludar (buenos días)");
+            Console.WriteLine("Soy un ESTUDIANTE y voy a saludar (buenos días), este es un nuevo método");
         }
 
         ~Estudiante()

@@ -32,35 +32,23 @@ namespace Paquete.Personajes
     {
         public static void Main(string[] args)
         {
-            Humano estudiante1 = new Estudiante("Pepe", 1234, "Diseño");
 
-            ((Estudiante)estudiante1).estudiar();
+            Animal perro = new Perro("Toby");
+            perro.caminar();
 
+            Animal pez = new Pez("Nemo");
+            pez.caminar();
 
-            Persona p = new Persona("pepe", 12345);
+            Animal ave = new Ave("Condorito");
+            ave.caminar();
 
-            p.saludar();
-
-            Console.WriteLine("=========================");
-
-
-
-            Estudiante est1 = new Estudiante();
-            Estudiante est2 = new Estudiante();
-            Estudiante est3 = new Estudiante();
-
-            Console.WriteLine(Estudiante.cantidadEstudiantes);
-
-
-            
 
             Console.ReadKey();
-
         }
 
         public static void mostrarPersona(Humano h)
         {
-            h.dormir();
+           
         }
     }
 

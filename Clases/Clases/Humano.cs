@@ -12,13 +12,17 @@ namespace Clases
         protected int edad { get; set; }
         protected string genero { get; set; }
 
-        public void dormir()
+        public abstract void dormir(string lugar);
+
+        public abstract void respirar();
+
+        public void correr()
         {
-            Console.WriteLine(this.Nombre + " Esta durmiendo");
+            Console.WriteLine(this.Nombre + " Esta corriendo");
         }
 
-        public void respirar()
-        {
-        }
     }
 }
+
+
+ 
