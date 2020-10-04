@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sobrecrga de operadores", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sobrecarga Operadores Unarios", "Sobrecarga Operadores Unarios\Sobrecarga Operadores Unarios.csproj", "{8FF921CB-2548-4B9A-8897-5DA44F6EC5EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operadores de Comparación", "Operadores de Comparación\Operadores de Comparación.csproj", "{860CDC41-E30E-44ED-B522-FDE2BCE9EE7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8FF921CB-2548-4B9A-8897-5DA44F6EC5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FF921CB-2548-4B9A-8897-5DA44F6EC5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FF921CB-2548-4B9A-8897-5DA44F6EC5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860CDC41-E30E-44ED-B522-FDE2BCE9EE7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860CDC41-E30E-44ED-B522-FDE2BCE9EE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860CDC41-E30E-44ED-B522-FDE2BCE9EE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860CDC41-E30E-44ED-B522-FDE2BCE9EE7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
