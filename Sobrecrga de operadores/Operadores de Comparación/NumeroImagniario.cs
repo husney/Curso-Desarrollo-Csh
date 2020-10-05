@@ -88,10 +88,15 @@ namespace Operadores_de_Comparación
             if(n1.CompareTo(n2) == -1 || n1.CompareTo(n2) == 0)
             {
                 return true;
-            }else
+            }
             {
                 return false;
             }
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
 
         public override bool Equals(object obj)
